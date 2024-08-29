@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 관련 스타일</title>
+
+    <style>
+        #c{
+            color: red;
+            color: #df2344;
+            color: rgb(15,25,44);
+            color: rgba(15, 94, 100, 0.433);
+        }
+
+        #td1{text-decoration: underline;}
+        #td2{text-decoration: line-through;}
+        #td3{text-decoration: overline;}
+    </style>
+</head>
+<body>
+    <h1>텍스트 관련 스타일(text~)</h1>
+
+    <h2>color : 텍스트 색상 지정</h2>
+    <pre id="c">
+        선택자{
+            color : 색상명 | #16진수(코드값) | rgb(x,x,x) | rgba(x,x,x,x)
+        }
+    </pre>
+
+    <h2>text-decoration : 텍스트에 줄을 긋거나 줄을 없앨 때 사용</h2>
+    <pre>
+        선택자{
+            text-decoration : none | underline | overline | line-throgh;
+        }
+    </pre>
+
+    <ul>
+        <li id="td1">텍스트 영역 아래에 줄 긋기</li>
+        <li id="td2">텍스트 영역 중간에 줄 긋기</li>
+        <li id="td3">텍스트 영역 위에 줄 긋기</li>
+    </ul>
+
+    <a href="https://www.naver.com" target="_blank" style="text-decoration: none;">네이버로 바로가기</a>
+
+    <hr>
+
+    <h3>text-align : 텍스트 정렬할 때 사용</h3>
+    <pre>
+        선택자{
+            text-align : left(기본값) | right | center | justify;
+        }
+    </pre>
+
+    <h4>왼쪽정렬(기본값)</h4>
+    <p style="text-align: left;">네? 뭘 타지 말라고요..? ⓒ어도비스톡, 커뮤니티 갈무리 지난 25일 온라인 커뮤니티를 뜨겁게 달군 사진 한 장이 있다. 사진의 정체는 건물 내부에 부착된 안내문 혹은 호소문이다. 엘리베이터나 아파트 게시판에 붙어 있는 그 안내문 말이다.</p>
+
+    <h4>양쪽정렬</h4>
+    <p style="text-align: justify;">네? 뭘 타지 말라고요..? ⓒ어도비스톡, 커뮤니티 갈무리 지난 25일 온라인 커뮤니티를 뜨겁게 달군 사진 한 장이 있다. 사진의 정체는 건물 내부에 부착된 안내문 혹은 호소문이다. 엘리베이터나 아파트 게시판에 붙어 있는 그 안내문 말이다.</p>
+
+    <h4>중앙정렬</h4>
+    <p style="text-align: center;">네? 뭘 타지 말라고요..? ⓒ어도비스톡, 커뮤니티 갈무리 지난 25일 온라인 커뮤니티를 뜨겁게 달군 사진 한 장이 있다. 사진의 정체는 건물 내부에 부착된 안내문 혹은 호소문이다. 엘리베이터나 아파트 게시판에 붙어 있는 그 안내문 말이다.</p>
+
+    <h4>오른쪽정렬</h4>
+    <p style="text-align: right;">네? 뭘 타지 말라고요..? ⓒ어도비스톡, 커뮤니티 갈무리 지난 25일 온라인 커뮤니티를 뜨겁게 달군 사진 한 장이 있다. 사진의 정체는 건물 내부에 부착된 안내문 혹은 호소문이다. 엘리베이터나 아파트 게시판에 붙어 있는 그 안내문 말이다.</p>
+
+    <hr>
+
+    <h3>line-height : 줄 간격을 조절할 때 사용</h3>
+    <pre>
+        선택자{
+            line-height: normal | px | em | %;
+        }
+    </pre>
+
+    <h4>px고정단위 간격</h4>
+    <p style="line-height: 30px;">네? 뭘 타지 말라고요..? ⓒ어도비스톡, 커뮤니티 갈무리 지난 25일 온라인 커뮤니티를 뜨겁게 달군 사진 한 장이 있다. 사진의 정체는 건물 내부에 부착된 안내문 혹은 호소문이다. 엘리베이터나 아파트 게시판에 붙어 있는 그 안내문 말이다.</p>
+
+    
+</body>
+</html>
