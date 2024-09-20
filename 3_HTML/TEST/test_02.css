@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+}
+
+.box{
+    width: 500px; height: 580px;
+    background-color: #eee;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    display: flex;
+    margin-top: 40px;
+}
+.box table{
+    width: 100%;
+    line-height: 80px;
+    text-align: left;
+    margin: 0 auto;
+}
+input{
+    width: 320px; height: 40px;
+    border: none;
+    border-bottom: 2px dashed #000;
+    outline: none;
+    background-color: #eee;
+    padding-left: 5px;
+    font-size: 16px;
+}
+#email{
+    width: 140px;
+}
+
+td{
+    padding-left: 20px;
+}
+
+.message{
+    display: none;
+    color: darkgray;
+    font-size: 12px;
+    position: absolute;
+    top: 160px;
+}
+
+.show-message .message {
+    display: block;
+}
+.show-message .error-message{
+    display: block;
+}
+
+tr:last-child td{
+    padding: 0;
+}
+#button{
+    width: 100%; height: 60px;
+    background-color: rgb(172, 218, 172);
+    border: none;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 8px;
+    margin: 0;
+}

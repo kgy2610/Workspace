@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>youtube</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="wrap">
+        <div id="left">
+            <div id="menu">
+                <img src="./icons/hamburger-menu.svg">
+            </div>
+            <div id="list">
+                <ul>
+                    <li>
+                        <ul>
+                            <li>
+                                <img src="./icons/home.svg">
+                            </li>
+                            <li>
+                                <p>홈</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <img src="./icons/originals.svg">
+                            </li>
+                            <li>
+                                <p>short</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <img src="./icons/subscriptions.svg">
+                            </li>
+                            <li>
+                                <p>구독</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <img src="./icons/library.svg">
+                            </li>
+                            <li>
+                                <p>나</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="right">
+            <header>
+                <div id="logo">
+                    <img src="./icons/youtube-logo.svg">
+                </div>
+                <div id="search">
+                    <input type="text" placeholder="검색" id="search-box">
+                    <input type="button" class="search-img" value=" "/>
+                    <div id="mic">
+                        <img src="./icons/voice-search-icon.svg">
+                    </div>
+                </div>
+                <div id="option">
+                    <img src="./icons/upload.svg" id="upload">
+                    <img src="./icons/notifications.svg" id="notice">
+                    <img src="./images/avatars/avatar-1.png" id="user">
+                </div>
+            </header>
+            <section>
+                <div id="content-container"></div>
+                <!-- <div id="content">
+                    <img src="./images/thumbnails/thumbnail01.PNG">
+                    <div id="content_info">
+                        <img src="./images/avatars/avatar-1.png">
+                        <ul>
+                            <li><p>빵빵이 택시기사ㅋㅋㅋㅋ</p></li>
+                            <li><p id="name">빵빵이의 일상</p></li>
+                            <li><p id="name">조회수432만회 · 2개월 전</p></li>
+                        </ul>
+                    </div>
+                </div> -->
+            </section>
+        </div>
+    </div>
+</body>
+<script>
+    const contentData = [
+        { image: "./images/thumbnails/thumbnail01.PNG", avatar: "./images/avatars/avatar-1.png", title: "빵빵이 택시기사ㅋㅋㅋㅋ", name: "빵빵이의 일상", stats: "조회수432만회 · 2개월 전" },
+        { image: "./images/thumbnails/thumbnail01.PNG", avatar: "./images/avatars/avatar-1.png", title: "빵빵이 택시기사ㅋㅋㅋㅋ", name: "빵빵이의 일상", stats: "조회수432만회 · 2개월 전" },
+        { image: "./images/thumbnails/thumbnail01.PNG", avatar: "./images/avatars/avatar-1.png", title: "빵빵이 택시기사ㅋㅋㅋㅋ", name: "빵빵이의 일상", stats: "조회수432만회 · 2개월 전" },
+        { image: "./images/thumbnails/thumbnail01.PNG", avatar: "./images/avatars/avatar-1.png", title: "빵빵이 택시기사ㅋㅋㅋㅋ", name: "빵빵이의 일상", stats: "조회수432만회 · 2개월 전" },
+        { image: "./images/thumbnails/thumbnail01.PNG", avatar: "./images/avatars/avatar-1.png", title: "빵빵이 택시기사ㅋㅋㅋㅋ", name: "빵빵이의 일상", stats: "조회수432만회 · 2개월 전" },
+        { image: "./images/thumbnails/thumbnail01.PNG", avatar: "./images/avatars/avatar-1.png", title: "빵빵이 택시기사ㅋㅋㅋㅋ", name: "빵빵이의 일상", stats: "조회수432만회 · 2개월 전" },
+        { image: "./images/thumbnails/thumbnail01.PNG", avatar: "./images/avatars/avatar-1.png", title: "빵빵이 택시기사ㅋㅋㅋㅋ", name: "빵빵이의 일상", stats: "조회수432만회 · 2개월 전" },
+        { image: "./images/thumbnails/thumbnail01.PNG", avatar: "./images/avatars/avatar-1.png", title: "빵빵이 택시기사ㅋㅋㅋㅋ", name: "빵빵이의 일상", stats: "조회수432만회 · 2개월 전" },
+        { image: "./images/thumbnails/thumbnail01.PNG", avatar: "./images/avatars/avatar-1.png", title: "빵빵이 택시기사ㅋㅋㅋㅋ", name: "빵빵이의 일상", stats: "조회수432만회 · 2개월 전" },
+        { image: "./images/thumbnails/thumbnail01.PNG", avatar: "./images/avatars/avatar-1.png", title: "빵빵이 택시기사ㅋㅋㅋㅋ", name: "빵빵이의 일상", stats: "조회수432만회 · 2개월 전" },
+        { image: "./images/thumbnails/thumbnail01.PNG", avatar: "./images/avatars/avatar-1.png", title: "빵빵이 택시기사ㅋㅋㅋㅋ", name: "빵빵이의 일상", stats: "조회수432만회 · 2개월 전" }
+    ];
+
+    function createContent(data) {
+        return `
+            <div id="content">
+                <img src="${data.image}" alt="Thumbnail">
+                <div id="content_info">
+                    <img src="${data.avatar}" alt="Avatar">
+                    <ul>
+                        <li><p>${data.title}</p></li>
+                        <li><p id="name">${data.name}</p></li>
+                        <li><p id="name">${data.stats}</p></li>
+                    </ul>
+                </div>
+            </div>
+        `;
+    }
+
+    function loadContents() {
+        const container = document.getElementById('content-container');
+        contentData.forEach(data => {
+            container.innerHTML += createContent(data);
+        });
+    }
+    window.onload = loadContents;
+</script>
+</html>
